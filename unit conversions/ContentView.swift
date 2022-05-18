@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var kilometers: Double = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
+        NavigationView {
+            Form {
+                Section {
+                    TextField("Wpisz km", value: $kilometers, format: .number)
+                } //Section 1
+            } // Form
+        } // Navigation view
+    } //body end
+} //view end
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
